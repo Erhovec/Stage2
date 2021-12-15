@@ -1,1 +1,3 @@
-export let name = "Kate";
+let name = "Kate";
+
+module.exports = name;
