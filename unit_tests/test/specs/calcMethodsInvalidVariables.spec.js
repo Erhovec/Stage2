@@ -1,21 +1,16 @@
 /* eslint-disable linebreak-style */
-const Calculator = require('../../app/calculator.js');
-const {assert} = require('chai');
+const Calculator = require("../../app/calculator.js");
+const { expect } = require("chai");
 
-describe('calcMethodsInvalidVariables', function() {
-  let operation;
-  beforeEach(() => {
-    operation = new Calculator();
-  });
+describe("Calculator", function () {
+  let operation = new Calculator();
 
-  afterEach(() => {
-    operation = null;
+  it("Should throw an error if not a number argument was passed to add method", function () {
+    let isErrorMessageAppeared = () => operation.add(5, "ht");
+    expect(isErrorMessageAppeared).to.throw("Variable should be a number!");
   });
-
-  it('Variable is not a number', function() {
-    assert(isNaN(operation.add('na', 10)));
-  });
-  it('Variable is not a number', function() {
-    assert(isNaN(operation.multiply(10, 'ghj')));
+  it("Should throw an error if not a number argument was passed to add method", function () {
+    let isErrorMessageAppeared = () => operation.multiply("letter", 10);
+    expect(isErrorMessageAppeared).to.throw("Variable should be a number!");
   });
 });

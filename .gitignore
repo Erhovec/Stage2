@@ -2,6 +2,3 @@ node_modules
 .nyc_output
 coverage
 mochawesome-report
-.eslintignore
-.eslintrc.json
-

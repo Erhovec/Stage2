@@ -20,14 +20,10 @@ class Calculator {
   add(el1, el2) {
     const typeOfVariable1 = typeof el1;
     const typeOfVariable2 = typeof el2;
-    try {
-      if (typeOfVariable1 === "number" && typeOfVariable2 === "number") {
-        return el1 + el2;
-      } else {
-        throw new Error("Variable should be a number!");
-      }
-    } catch (err) {
-      console.log(err);
+    if (typeOfVariable1 === "number" && typeOfVariable2 === "number") {
+      return el1 + el2;
+    } else {
+      throw new Error("Variable should be a number!");
     }
   }
   /**
@@ -39,14 +35,10 @@ class Calculator {
   multiply(el1, el2) {
     const typeOfVariable1 = typeof el1;
     const typeOfVariable2 = typeof el2;
-    try {
-      if (typeOfVariable1 === "number" && typeOfVariable2 === "number") {
-        return el1 * el2;
-      } else {
-        throw new Error("Variable should be a number!");
-      }
-    } catch (err) {
-      console.log(err);
+    if (typeOfVariable1 === "number" && typeOfVariable2 === "number") {
+      return el1 * el2;
+    } else {
+      throw new Error("Variable should be a number!");
     }
   }
 }
