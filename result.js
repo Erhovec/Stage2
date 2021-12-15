@@ -1,5 +1,3 @@
-const name = require('./name.js');
+const name = require("./name.js");
 
-console.log (name);
-
-
+console.log(name);
