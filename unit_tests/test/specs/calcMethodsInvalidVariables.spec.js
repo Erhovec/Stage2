@@ -9,7 +9,7 @@ describe("Calculator", function () {
     let isErrorMessageAppeared = () => operation.add(5, "ht");
     expect(isErrorMessageAppeared).to.throw("Variable should be a number!");
   });
-  it("Should throw an error if not a number argument was passed to add method", function () {
+  it("Should throw an error if not a number argument was passed to multiply method", function () {
     let isErrorMessageAppeared = () => operation.multiply("letter", 10);
     expect(isErrorMessageAppeared).to.throw("Variable should be a number!");
   });
