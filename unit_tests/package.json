@@ -1,0 +1,30 @@
+{
+  "name": "unit_test_for_calculator",
+  "version": "1.0.0",
+  "description": "unit tests with mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^8.4.1",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^7.0.4",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "reporter": "html"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run coverage"
+    }
+  }
+}
